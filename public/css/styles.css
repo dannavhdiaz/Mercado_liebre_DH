@@ -17,7 +17,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--gris-claro);
-    min-height: auto;
 }
 
 header {
@@ -81,7 +80,6 @@ p {
     width: 90%;
     padding: 5px;
     border-radius: 5px;
-    /* margin: 5px; */
 }
 
 .copy-header{
@@ -143,6 +141,7 @@ main {
     width: 90%;
     text-align: center;
     margin: auto;
+    min-height: 55vh;
 }
 
 main article {
@@ -182,9 +181,39 @@ main div.product-content {
     align-items: center;
 }
 
+.main_login {
+    display: flex;
+    align-items: center;
+}
+
+.main_login h2{
+    margin-bottom: 30px;
+}
+
+.main_register section h2{
+    margin-bottom: 30px;
+}
+
+.main_register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_register h5{
+    padding: 20px 0;
+}
+
 form {
-    padding: 20px;
+    padding: 30px;
+}
+
+#form_registro {
     text-align: left;
+}
+
+#form_login {
+    text-align: center;
 }
 
 form input {
@@ -192,21 +221,38 @@ form input {
     padding: 5px;
     margin-bottom: 20px;
     border-radius: 5px;
-}
-
-#form_login,#form_registro div{
     width: 100%;
 }
 
-#form_login input{
-    width: 100%;
-}
-
-input[type=button], input[type=submit], input[type=reset] {
+form input[type=submit], input[type=reset] {
     background-color: var(--gris-oscuro);
     color: white;
-    width: 100%;
   }
+
+form input[type=radio], input[type=checkbox] {
+    width: 5%;
+}
+
+#form_login,#form_registro section {
+    width: 100%;
+    display: block;
+}
+
+.form-submit-reset {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-submit-reset div{
+    margin-right: 10px;
+    width: 100%;
+}
+
+.form-submit-reset div input{
+    width: 100%;
+}
 
 footer{
     background-color: white;
@@ -223,6 +269,7 @@ footer i{
     padding: 10px;
 } 
 
+/*Tablet*/
 @media (min-width: 480px ) {
 
     main section{
@@ -231,9 +278,7 @@ footer i{
         flex-wrap: wrap;
     }
     main article{
-        /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
         width: 45%;
-        /* display: inline-block; */
     }
 
     main article:hover{
@@ -278,6 +323,7 @@ footer i{
     
 }
 
+/*Escritorio*/
  @media (min-width: 769px){
     
     main article {
@@ -293,18 +339,20 @@ footer i{
         visibility: visible;
     }
 
-    main article:hover i{
+    main article i{
         transition: transform 1s;
-        transform: rotateZ(-90deg);
     }
 
-    #form_login,#form_registro input[type=text], input[type=email], input[type=date], input[type=button], input[type=submit], input[type=reset] {
+    main article:hover i{
+        transform: rotate(-90deg);
+    }
+
+    #form_login input {
         width: 50%;
     }
 
     #enviar_login:hover{
         background-color: var(--azul-naval);
-        color: white;
     }
 
     footer i:hover{

@@ -21,7 +21,7 @@
 <header>
     <div class="main-header">
         <div class="logo">
-            <img src="/images/logo-mercado-liebre.svg"></img>
+            <a href="home"><img src="/images/logo-mercado-liebre.svg" hre></img></a>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Buscar productos, marcas">
@@ -52,34 +52,53 @@
 
 </header>
 
-<main>
-    <form action="home" method="POST" id="form_registro">
-
+<main class="main_register">
+    <form action="home" id="form_registro">
+    
         <section>
+            <h2>Creá tu cuenta!</h2>
+
+                <div>
+                    <input type="text" placeholder="Nombre y apellido" required>
+                </div>
+        
+                <div>
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="Nombre de usuario" required>
+                </div>
+
+                <div>
+                    <input type="password" name="password" placeholder="Elegí tu contraseña" required>    
+                </div>
+        
+                <div>
+                    <input type="password" name="confirm-password" placeholder="Confirmá tu contraseña" required>    
+                </div>
+
+                <div>
+                    <label for="foto-usuario">Foto de perfil</label>
+                    <input type="file" name="foto-usuario">
+                </div>
+        
+        </section>
+            <h5> Fecha de nacimiento </h5>
+
             <div>
-                <input type="text" placeholder="Nombre y apellido">
+                <input type="date" name="fecha-nacimiento">
             </div>
     
             <div>
-                <input type="text" placeholder="Nombre de usuario">
+                <input type="text" name="domicilio" placeholder="Domicilio">
             </div>
-    
-            <div>
-                <input type="email" placeholder="E-mail">
-            </div>
+        <section>
+            
         </section>
 
-        <h4> Fecha de nacimiento </h4>
 
-        <div>
-            <input type="date" name="fecha-nacimiento">
-        </div>
-
-        <div>
-            <input type="text" name="domicilio" placeholder="Domicilio">
-        </div>
-
-        <h4> Perfil del usuario</h4>
+        <h5> Perfil del usuario</h5>
 
         <div>
             <input type="radio" name="radio-comprador" value="comprador">
@@ -91,7 +110,7 @@
             <label for="radio-vendedor">Vendedor</label>
         </div>
 
-        <h4> Intereses </h4>
+        <h5> Intereses </h5>
 
         <div>
             <input type="checkbox" name="electro" value="Electro">
@@ -118,16 +137,7 @@
             <label for="vida-sana">Vida Sana</label>
         </div>
 
-        <div>
-            <label for="file">Foto de perfil</label>
-            <input type="file" name="foto-usuario">
-        </div>
-
-        <div>
-            <input type="password" name="password" placeholder="Elegí tu contraseña">    
-        </div>
-
-        <div class="buttons-submit-reset">
+        <div class="form-submit-reset">
             <div>
                 <input type="submit" value="Enviar" id="enviar_registro">
             </div>
